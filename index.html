@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+
+        }
+
+        select,
+        button {
+            margin-top: 10px;
+            margin-bottom: 16px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #jadwalSholat {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .jadwal-item {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgb(0, 0, 0, 0, 0.1);
+            transition: background-color 0.3s box-shadow 0.3s;
+        }
+
+        .jadwal-item:hover {
+            background-color: #f0f8ff;
+            box-shadow: 0 2px 4px rgb(0, 0, 0, 0, 0.2);
+
+        }
+
+        .no-select {
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body class="no-select">
+
+    <h1>Jadwal Sholat</h1>
+
+    <select id="selectCity">
+        <option value="" disabled selected>Pilih Kota</option>
+    </select>
+
+    <button onclick="getJadwalSholat()">Lihat Jadwal</button>
+
+    <div id="message">
+        <img src="images/masjid.png" alt="Gambar Masjid">
+    </div>
+
+    <div id="jadwalSholat"></div>
+
+    <script src="js/sholat.js"></script>
+</body>
+
+</html>
